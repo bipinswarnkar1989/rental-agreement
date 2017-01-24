@@ -18,7 +18,7 @@ export class MyAppComponent {
 
 
   // Link to our api, pointing to localhost
- API = 'http://localhost:3000';
+ API = '';
 
  // Declare empty list of agreements
   agmts: any[] = [];

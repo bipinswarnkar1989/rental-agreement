@@ -3,18 +3,33 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { AppRoutingModule }  from './app-routing.module';
+import { AgmtRoutingModule } from './agmt-routing.module';
+import { AgmtEditRoutingModule } from './agmtedit-routing.module';
+
+import { MyAppComponent } from './myapp.component';
 import { AppComponent } from './app.component';
+import { AgmtComponent } from './agmt.component';
+import { AgmtEditComponent } from './agmtedit.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AgmtComponent,
+    MyAppComponent,
+    AgmtEditComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AgmtRoutingModule,
+    AppRoutingModule,
+    AgmtEditRoutingModule
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

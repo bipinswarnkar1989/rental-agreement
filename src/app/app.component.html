@@ -1,3 +1,133 @@
-<h1>
-  {{title}}
-</h1>
+
+
+<div class="container">
+
+  <div>
+        <div class="row">
+          <div class="col-lg-12"><h1>Available Agreements:  <button data-toggle="modal" data-target="#myModal" type="submit" class="btn btn-danger navbar-btn pull-right" name="Create New" id="logout"  value="Create New"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle"></span> Create New</button>
+ </h1>
+ <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">New Agreement</h4>
+        </div>
+        <div class="modal-body">
+          <div  class="panel panel-primary">
+
+         <div class="panel-body">
+         <div class="row">
+           <form    novalidate>
+          <div class="col-md-6 tenant">
+            <h3 class="text-center">Tenant Details</h3>
+
+              <div class="form-group">
+                <label for="tenant name">Tenant Name</label>
+                <input type="text" class="form-control" id="tenant_name" #tenant_name>
+
+              </div>
+              <div class="form-group">
+                <label for="age">Tenant Fathers Name</label>
+                <input type="text" class="form-control" id="tenant_fathers_name" #tenant_fathers_name>
+              </div>
+              <div class="form-group">
+                <label for="tenant name">Tenant Mobile</label>
+                <input type="text" class="form-control" id="tenant_mobile" #tenant_mobile>
+              </div>
+              <div class="form-group">
+                <label for="tenant name">Tenant Address</label>
+                <input type="text" class="form-control" id="tenant_address" #tenant_address>
+              </div>
+
+          </div>
+
+          <!-- Owner starts below-->
+          <div class="col-md-6 tenant">
+            <h3 class="text-center">Owner Details</h3>
+
+              <div class="form-group">
+                <label for="tenant name">Owner Name</label>
+                <input type="text" class="form-control" id="owner_name" #owner_name>
+              </div>
+              <div class="form-group">
+                <label for="age">Owner Fathers Name</label>
+                <input type="text" class="form-control" id="owner_fathers_name" #owner_fathers_name>
+              </div>
+
+              <div class="form-group">
+                <label for="tenant name">Owner Mobile</label>
+                <input type="text" class="form-control" id="owner_mobile" #owner_mobile>
+              </div>
+              <div class="form-group">
+                <label for="tenant name">Owner Address</label>
+                <input type="text" class="form-control" id="owner_address" #owner_address>
+              </div>
+
+          </div>
+
+          <div class="col-md-12 text-center">
+            <h3 class="text-center">Renting Details</h3>
+            <div class="form-group">
+              <label for="tenant name">Monthly Rent</label>
+              <input type="text" class="form-control" id="monthly_rent" #monthly_rent>
+            </div>
+            <div class="form-group">
+              <label for="tenant name">Security Deposit</label>
+              <input type="text" class="form-control" id="security_deposit" #security_deposit>
+            </div>
+            <div class="form-group">
+              <label for="tenant name">Renting Date</label>
+              <input type="text" class="form-control" id="renting_date" #renting_date>
+            </div>
+            <div class="form-group">
+              <label for="tenant name">Lease Period</label>
+              <input type="text" class="form-control" id="lease_period" #lease_period>
+            </div>
+
+          </div>
+
+          <div class="col-md-12 text-center">
+            <p style="font-size:18px;color:green;" align="center">{{message}}</p>
+         <button  type="submit" (click)="addAgmt(tenant_name.value,tenant_fathers_name.value,owner_name.value, owner_fathers_name.value,tenant_mobile.value,tenant_address.value,owner_mobile.value,owner_address.value,monthly_rent.value,security_deposit.value,renting_date.value,lease_period.value)"  class="btn btn-info btn-lg">Submit</button>
+          </div>
+        </form>
+         </div>
+         </div>
+         </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+          </div>
+          <div *ngFor="let agreement of agmts" class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <div class="thumbnail">
+                <div class="caption">
+                  <div class='col-lg-12'>
+                    Between
+                      <a (click)="deleteAgmt(agreement._id)" href="javascript:void(0);"><span class="glyphicon glyphicon-trash pull-right text-primary"></span></a><br>
+                  </div>
+                  <div class="col-lg-12 well well-add-card">
+                      <h4>1. {{agreement.tenant_name}}</h4>
+                  </div>
+
+                  <div class="col-lg-12 well well-add-card">
+                 <h4>2. {{agreement.owner_name}}</h4>
+                  </div>
+                <a routerLink="/agreement/{{agreement._id}}" routerLinkActive="active">  <button  type="button" class="btn btn-primary btn-xs btn-update btn-add-card">View</button></a>
+                <a routerLink="/edit/agreement/{{agreement._id}}" routerLinkActive="active">   <button type="button" class="btn btn-danger btn-xs btn-update btn-add-card">Edit</button></a>
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+</div>

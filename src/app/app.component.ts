@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-  <!-- Bootstrap Navbar -->
   <nav class="navbar navbar-default bg-faded">
     <div class="container">
       <a class="navbar-brand center" href="#">Rental Agreement</a>

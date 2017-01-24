@@ -71,7 +71,7 @@ router.get('/agreement', (req, res) => {
 	Agreement.find({}, (err, agmt) => {
 		if (err) return res.status(500).json(err)
 
-		res.status(200).json(agmt);
+		return res.json(agmt);
 	});
 });
 

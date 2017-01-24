@@ -53,7 +53,7 @@ private id: string;
 private Agmt: any[] = [];
 
 // Link to our api, pointing to localhost
-API = '';
+API = 'http://localhost:3000';
 
 constructor(
   private route: ActivatedRoute,

@@ -64,10 +64,7 @@ const agreementSchema = new mongoose.Schema({
 // create mongoose model
 const Agreement = mongoose.model('Agreement', agreementSchema);
 
-/* GET api listing. */
-router.get('/', (req, res) => {
-		res.send('REST api works');
-});
+
 
 /* GET all users. */
 router.get('/agreement', (req, res) => {

@@ -97,7 +97,7 @@ private Agmt: any[] = [];
 private message: string;
 
 // Link to our api, pointing to localhost
-API = 'http://localhost:3000';
+API = '';
 
 constructor(
   private route: ActivatedRoute,

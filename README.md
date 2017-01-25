@@ -3,7 +3,20 @@
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.25.5.
 
 ## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Start your mongoDB first : Ex-  /Users/bipinswarnkar/mongodb/bin/mongod --dbpath="/Users/bipinswarnkar/Node-js-worspace/data
+2. Download Zip and go inside root of app: cd rental-agreement
+3. Run ng build --aot -prod 
+3. Run :  npm install & npm start in new terminal.
+4. Go http://localhost:3000/
+
+
+## Development server method 2
+1. Start your mongoDB first : Ex-  /Users/bipinswarnkar/mongodb/bin/mongod --dbpath="/Users/bipinswarnkar/Node-js-worspace/data
+2. Download Zip and go inside root of app: cd rental-agreement
+3. Run :  npm install & node server.js  in new terminal.
+4. Run ng serve in a new terminal.
+5. Go http://localhost:4200/
+
 
 ## Code scaffolding
 
